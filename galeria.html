@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Galeria</title>
+
+    <script>
+        function openGaleria(image){
+            var section = document.getElementById("galeriaselected");
+
+            var img = document.getElementById("imgselected");
+            img.src = image.src;
+
+            section.style.visibility = "visible";
+        }
+
+        function closeGaleria(image){
+            var section = document.getElementById("galeriaselected");
+
+            section.style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body>
+    <section id="galeriaselected">
+        <span onclick="closeGaleria();">&#10006;</span>
+        <div>
+            <img id="imgselected" src="images/algarve1.jpg">
+        </div>
+    </section>
+
+    <section id="galeria">
+            <img onclick="openGaleria(this);" src="images/algarve1.jpg">
+            <img onclick="openGaleria(this);" src="images/algarve2.jpg">
+            <img onclick="openGaleria(this);" src="images/algarve3.jpg">
+            <img onclick="openGaleria(this);" src="images/algarve4.jpg">
+            <img onclick="openGaleria(this);" src="images/algarve5.jpg">
+            <img onclick="openGaleria(this);" src="images/algarve6.jpg">
+    </section>
+</body>
+</html>
